@@ -54,11 +54,11 @@ def get_games(plan):
             games.append(cols[1:7])
     for game in games:
         if game[0]:
-            games = game[0]
+            date = game[0]
         else:
             game[0] = date
-    data = [x for x in games if VEREIN in x]
-    for idx, game in enumerate(data):
+    games = [x for x in games if VEREIN in x]
+    for idx, game in enumerate(games):
         games[idx].remove(VEREIN)
     return games
 

@@ -1,2 +1,6 @@
 # nuLigatoiCal
-Erstellt ein iCalendar vom Spielplan eines Vereins von HVN nuLiga
+Das Skript erstellt ein iCalendar vom gesamten Spielplan von HVN nuLiga eines Vereines.
+
+## Variablen
+- SPIELPLAN_URL: Die URL vom gesamten Spielplan
+- VEREIN: Name des Vereins, wie er im Spielplan steht

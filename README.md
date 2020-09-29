@@ -4,3 +4,4 @@ Das Skript erstellt ein iCalendar vom gesamten Spielplan eines Vereines der HVN 
 ## Variablen
 - `SPIELPLAN_URL` : Die URL vom gesamten Spielplan
 - `VEREIN` : Name des Vereins, wie er im Spielplan steht
+- `FILENAME` : Dateiname der .ics Datei

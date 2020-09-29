@@ -5,8 +5,9 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from icalendar import Calendar, Event
 
-SPIELPLAN_URL = 'https://hvn-handball.liga.nu/cgi-bin/WebObjects/nuLigaHBDE.woa/wa/groupPage?displayTyp=vorrunde&displayDetail=meetings&championship=Hannover+2020%2F21&group=269069'
+SPIELPLAN_URL = 'https://hvn-handball.liga.nu/cgi-bin/WebObjects/nuLigaHBDE.woa/wa/groupPage?displayTyp=vorrunde&displayDetail=meetings&championship=HWL++2020%2F21&group=269069'
 VEREIN = 'TV Hannover-Badenstedt'
+FILENAME = 'saison20-21'
 
 
 def simple_get(url):
@@ -98,9 +99,10 @@ def create_calendar(data):
         event.add('location', entry[1])
         cal.add_component(event)
 
-    f = open('saison20-21.ics', 'wb')
+    f = open(FILENAME + '.ics', 'wb')
     f.write(cal.to_ical())
     f.close()
+    print(f.name + ' created.')
 
 
 if __name__ == "__main__":
